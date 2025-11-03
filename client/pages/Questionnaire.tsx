@@ -223,35 +223,45 @@ export default function Questionnaire() {
       )}
 
       {step === 2 && (
-        <form className="space-y-6">
-          <div>
-            <label className="block text-sm font-medium mb-1">Marital status</label>
-            <p className="text-xs text-muted-foreground mb-2">Select your marital status</p>
-            <select
-              value={form.maritalStatus}
-              onChange={(e) => setForm({ ...form, maritalStatus: e.target.value })}
-              className="w-full h-11 rounded-md border px-3 bg-white focus:outline-none focus:ring-2 focus:ring-ring"
-            >
-              <option value="">Select</option>
-              <option value="single">Single</option>
-              <option value="married">Married</option>
-              <option value="divorced">Divorced</option>
-              <option value="widowed">Widowed</option>
-            </select>
+        <div className="grid gap-6">
+          <div className="card fade-in grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div className="flex items-center justify-center bg-sky-50 rounded-md p-3 md:p-4">
+              <Users className="text-sky-600" />
+            </div>
+            <div className="md:col-span-2">
+              <label className="block text-sm font-medium mb-1">Marital status</label>
+              <p className="text-xs text-muted-foreground mb-2">Select your marital status</p>
+              <select
+                value={form.maritalStatus}
+                onChange={(e) => setForm({ ...form, maritalStatus: e.target.value })}
+                className="w-full h-12 rounded-md border px-3 bg-white focus:outline-none focus:ring-2 focus:ring-sky-300"
+              >
+                <option value="">Select</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
+                <option value="widowed">Widowed</option>
+              </select>
+            </div>
           </div>
 
-          <div>
-            <label className="block text-sm font-medium mb-1">Number of dependents</label>
-            <p className="text-xs text-muted-foreground mb-2">Example: 2</p>
-            <input
-              type="number"
-              value={form.dependents}
-              onChange={(e) => setForm({ ...form, dependents: e.target.value })}
-              placeholder="Enter number of dependents"
-              className="w-full h-11 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-ring"
-            />
+          <div className="card fade-in grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div className="flex items-center justify-center bg-sky-50 rounded-md p-3 md:p-4">
+              <Users className="text-sky-600" />
+            </div>
+            <div className="md:col-span-2">
+              <label className="block text-sm font-medium mb-1">Number of dependents</label>
+              <p className="text-xs text-muted-foreground mb-2">Example: 2</p>
+              <input
+                type="number"
+                value={form.dependents}
+                onChange={(e) => setForm({ ...form, dependents: e.target.value })}
+                placeholder="Enter number of dependents"
+                className="w-full h-12 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-sky-300"
+              />
+            </div>
           </div>
-        </form>
+        </div>
       )}
 
       {step === 3 && (
