@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Calendar, Wallet, Users, MapPin, User, Briefcase, Home, ClipboardList } from "lucide-react";
 
 export default function Questionnaire() {
   const navigate = useNavigate();
