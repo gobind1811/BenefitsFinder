@@ -61,14 +61,14 @@ export default function Questionnaire() {
         <h2 className="text-2xl font-semibold">Questionnaire</h2>
       </div>
 
-      <div className="flex items-center gap-6 mb-10">
+      <div className="flex items-center gap-6 mb-10 bg-black/90 p-4 rounded-md justify-center">
         {Array.from({ length: total }).map((_, i) => {
           const n = i + 1;
           const active = n <= step;
           return (
             <div key={n} className="flex items-center gap-6">
-              <div className={`w-8 h-8 rounded-full grid place-items-center text-sm font-medium border ${active ? "bg-primary text-white border-primary" : "bg-secondary text-foreground/70"}`}>{n}</div>
-              {n !== total && <div className={`h-1 w-20 rounded ${n < step ? "bg-primary" : "bg-muted"}`}></div>}
+              <div className={`w-8 h-8 rounded-full grid place-items-center text-sm font-medium ${active ? "bg-primary text-white border border-primary" : "bg-black text-white border border-white/20"}`}>{n}</div>
+              {n !== total && <div className={`h-1 w-20 rounded ${n < step ? "bg-primary" : "bg-white/30"}`}></div>}
             </div>
           );
         })}
