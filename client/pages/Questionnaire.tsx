@@ -76,7 +76,7 @@ export default function Questionnaire() {
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">Please enter your state:</label>
-            <p className="text-xs text-muted-foreground mb-2">Example: California</p>
+            <p className="text-xs text-muted-foreground mb-2">Example: Punjab</p>
             <input
               type="text"
               value={form.state}
