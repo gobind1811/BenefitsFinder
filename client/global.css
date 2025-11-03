@@ -182,3 +182,33 @@
   position: relative;
   z-index: 10;
 }
+
+/* Card styles for questionnaire */
+.card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+  padding: 1.25rem;
+}
+
+/* Subtle fade-in animation for step transitions */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+  animation: fadeInUp 320ms ease;
+}
+
+/* Button hover animations */
+.btn-primary {
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(14, 165, 233, 0.12);
+}
+
+.btn-ghost:hover {
+  transform: translateY(-2px);
+}
