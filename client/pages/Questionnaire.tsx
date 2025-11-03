@@ -81,6 +81,42 @@ export default function Questionnaire() {
               className="w-full h-11 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
+
+          <div>
+            <label className="block text-sm font-medium mb-1">Gender</label>
+            <p className="text-xs text-muted-foreground mb-2">Select your gender</p>
+            <select
+              value={form.gender}
+              onChange={(e) => setForm({ ...form, gender: e.target.value })}
+              className="w-full h-11 rounded-md border px-3 bg-white focus:outline-none focus:ring-2 focus:ring-ring"
+            >
+              <option value="">Select gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+              <option value="prefer_not_say">Prefer not to say</option>
+            </select>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium mb-1">Occupation</label>
+            <p className="text-xs text-muted-foreground mb-2">Select your occupation</p>
+            <select
+              value={form.occupation}
+              onChange={(e) => setForm({ ...form, occupation: e.target.value })}
+              className="w-full h-11 rounded-md border px-3 bg-white focus:outline-none focus:ring-2 focus:ring-ring"
+            >
+              <option value="">Select occupation</option>
+              <option value="employed">Employed</option>
+              <option value="self_employed">Self-employed</option>
+              <option value="student">Student</option>
+              <option value="unemployed">Unemployed</option>
+              <option value="retired">Retired</option>
+              <option value="homemaker">Homemaker</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
           <div>
             <label className="block text-sm font-medium mb-1">Please enter your state:</label>
             <p className="text-xs text-muted-foreground mb-2">Example: Punjab</p>
