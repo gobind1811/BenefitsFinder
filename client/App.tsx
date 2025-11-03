@@ -11,6 +11,7 @@ import Index from "./pages/Index";
 import Questionnaire from "./pages/Questionnaire";
 import Placeholder from "./pages/Placeholder";
 import NotFound from "./pages/NotFound";
+import Login from "./pages/Login";
 
 const queryClient = new QueryClient();
 
