@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Index from "./pages/Index";
 import Questionnaire from "./pages/Questionnaire";
+import Results from "./pages/Results";
 import Placeholder from "./pages/Placeholder";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
