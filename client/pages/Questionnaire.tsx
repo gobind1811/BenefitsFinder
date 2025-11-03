@@ -54,7 +54,7 @@ export default function Questionnaire() {
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">Please enter your annual income:</label>
-            <p className="text-xs text-muted-foreground mb-2">Example: $50,000</p>
+            <p className="text-xs text-muted-foreground mb-2">Example: ₹50,000</p>
             <input
               type="text"
               value={form.income}
