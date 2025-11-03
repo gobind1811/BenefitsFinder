@@ -4,21 +4,49 @@ import { useNavigate } from "react-router-dom";
 export default function Questionnaire() {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
-  const total = 4;
-  const [form, setForm] = useState({ age: "", income: "", household: "", state: "", gender: "", occupation: "" });
+  const total = 7;
+  const [form, setForm] = useState({
+    age: "",
+    income: "",
+    household: "",
+    state: "",
+    gender: "",
+    occupation: "",
+    maritalStatus: "",
+    dependents: "",
+    education: "",
+    disability: "",
+    housing: "",
+    benefits: [] as string[],
+  });
+
+  const toggleBenefit = (value: string) => {
+    setForm((f) => {
+      const has = f.benefits.includes(value);
+      return { ...f, benefits: has ? f.benefits.filter((b) => b !== value) : [...f.benefits, value] };
+    });
+  };
 
   const canNext = useMemo(() => {
-    if (step === 1) {
-      return (
-        form.age !== "" &&
-        form.income !== "" &&
-        form.household !== "" &&
-        form.state !== "" &&
-        form.gender !== "" &&
-        form.occupation !== ""
-      );
+    switch (step) {
+      case 1:
+        return (
+          form.age !== "" &&
+          form.income !== "" &&
+          form.household !== "" &&
+          form.state !== "" &&
+          form.gender !== "" &&
+          form.occupation !== ""
+        );
+      case 2:
+        return form.maritalStatus !== "" && form.dependents !== "";
+      case 3:
+        return form.education !== "" && form.disability !== "";
+      case 4:
+        return form.housing !== ""; // benefits optional
+      default:
+        return true;
     }
-    return true;
   }, [step, form]);
 
   const next = () => {
