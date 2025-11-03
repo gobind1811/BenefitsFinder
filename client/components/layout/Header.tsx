@@ -8,10 +8,10 @@ export default function Header() {
     <header className="sticky top-0 z-30 bg-white/80 backdrop-blur border-b">
       <div className="container flex items-center justify-between h-14">
         <Link to="/" className="flex items-center gap-2 text-xl font-semibold">
-          <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-primary text-white">
+          <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white shadow-md">
             <Search size={16} />
           </span>
-          <span>BenefitsFinder</span>
+          <span className="text-bright-gradient">BenefitsFinder</span>
         </Link>
         <nav className="hidden md:flex items-center gap-1">
           {[
