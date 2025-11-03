@@ -7,16 +7,16 @@ export default function Header() {
   const location = useLocation();
   const isHome = location.pathname === "/";
   const headerClass = isHome ? "sticky top-0 z-30 bg-transparent" : "sticky top-0 z-30 bg-white/80 backdrop-blur border-b";
-  const navDefault = isHome ? "text-white/90" : "text-dark-muted";
+  const navDefault = isHome ? "text-white/90" : "text-black";
 
   return (
     <header className={headerClass}>
       <div className="container flex items-center justify-between h-14">
         <Link to="/" className="flex items-center gap-2 text-xl font-semibold">
-          <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white shadow-md">
+          <span className={`inline-flex items-center justify-center w-8 h-8 rounded-full shadow-md ${isHome ? 'bg-primary text-white' : 'bg-white text-black border'}`}>
             <Search size={16} />
           </span>
-          <span className={isHome ? "text-white font-bold" : "text-bright-gradient"}>BenefitsFinder</span>
+          <span className={isHome ? "text-white font-bold" : "text-black font-bold"}>BenefitsFinder</span>
         </Link>
         <nav className="hidden md:flex items-center gap-1">
           {[
