@@ -265,35 +265,45 @@ export default function Questionnaire() {
       )}
 
       {step === 3 && (
-        <form className="space-y-6">
-          <div>
-            <label className="block text-sm font-medium mb-1">Education level</label>
-            <p className="text-xs text-muted-foreground mb-2">Select highest education level</p>
-            <select
-              value={form.education}
-              onChange={(e) => setForm({ ...form, education: e.target.value })}
-              className="w-full h-11 rounded-md border px-3 bg-white focus:outline-none focus:ring-2 focus:ring-ring"
-            >
-              <option value="">Select</option>
-              <option value="no_formal">No formal education</option>
-              <option value="primary">Primary</option>
-              <option value="secondary">Secondary</option>
-              <option value="higher_secondary">Higher Secondary</option>
-              <option value="graduate">Graduate</option>
-              <option value="postgraduate">Postgraduate</option>
-            </select>
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium mb-1">Disability status</label>
-            <p className="text-xs text-muted-foreground mb-2">Do you identify as having a disability?</p>
-            <div className="flex gap-4">
-              <label className="inline-flex items-center gap-2"><input type="radio" name="disability" checked={form.disability === "no"} onChange={() => setForm({ ...form, disability: "no" })} /> No</label>
-              <label className="inline-flex items-center gap-2"><input type="radio" name="disability" checked={form.disability === "yes"} onChange={() => setForm({ ...form, disability: "yes" })} /> Yes</label>
-              <label className="inline-flex items-center gap-2"><input type="radio" name="disability" checked={form.disability === "prefer_not"} onChange={() => setForm({ ...form, disability: "prefer_not" })} /> Prefer not to say</label>
+        <div className="grid gap-6">
+          <div className="card fade-in grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div className="flex items-center justify-center bg-sky-50 rounded-md p-3 md:p-4">
+              <ClipboardList className="text-sky-600" />
+            </div>
+            <div className="md:col-span-2">
+              <label className="block text-sm font-medium mb-1">Education level</label>
+              <p className="text-xs text-muted-foreground mb-2">Select highest education level</p>
+              <select
+                value={form.education}
+                onChange={(e) => setForm({ ...form, education: e.target.value })}
+                className="w-full h-12 rounded-md border px-3 bg-white focus:outline-none focus:ring-2 focus:ring-sky-300"
+              >
+                <option value="">Select</option>
+                <option value="no_formal">No formal education</option>
+                <option value="primary">Primary</option>
+                <option value="secondary">Secondary</option>
+                <option value="higher_secondary">Higher Secondary</option>
+                <option value="graduate">Graduate</option>
+                <option value="postgraduate">Postgraduate</option>
+              </select>
             </div>
           </div>
-        </form>
+
+          <div className="card fade-in grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div className="flex items-center justify-center bg-sky-50 rounded-md p-3 md:p-4">
+              <Users className="text-sky-600" />
+            </div>
+            <div className="md:col-span-2">
+              <label className="block text-sm font-medium mb-1">Disability status</label>
+              <p className="text-xs text-muted-foreground mb-2">Do you identify as having a disability?</p>
+              <div className="flex gap-4">
+                <label className="inline-flex items-center gap-2"><input type="radio" name="disability" checked={form.disability === "no"} onChange={() => setForm({ ...form, disability: "no" })} /> No</label>
+                <label className="inline-flex items-center gap-2"><input type="radio" name="disability" checked={form.disability === "yes"} onChange={() => setForm({ ...form, disability: "yes" })} /> Yes</label>
+                <label className="inline-flex items-center gap-2"><input type="radio" name="disability" checked={form.disability === "prefer_not"} onChange={() => setForm({ ...form, disability: "prefer_not" })} /> Prefer not to say</label>
+              </div>
+            </div>
+          </div>
+        </div>
       )}
 
       {step === 4 && (
