@@ -9,7 +9,14 @@ export default function Questionnaire() {
 
   const canNext = useMemo(() => {
     if (step === 1) {
-      return form.age !== "" && form.income !== "" && form.household !== "" && form.state !== "";
+      return (
+        form.age !== "" &&
+        form.income !== "" &&
+        form.household !== "" &&
+        form.state !== "" &&
+        form.gender !== "" &&
+        form.occupation !== ""
+      );
     }
     return true;
   }, [step, form]);
