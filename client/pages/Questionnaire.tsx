@@ -62,17 +62,47 @@ export default function Questionnaire() {
         <h2 className="text-2xl font-semibold">Questionnaire</h2>
       </div>
 
-      <div className="flex items-center gap-6 mb-10 bg-black/90 p-4 rounded-md justify-center">
-        {Array.from({ length: total }).map((_, i) => {
-          const n = i + 1;
-          const active = n <= step;
-          return (
-            <div key={n} className="flex items-center gap-6">
-              <div className={`w-8 h-8 rounded-full grid place-items-center text-sm font-medium ${active ? "bg-primary text-white border border-primary" : "bg-black text-white border border-white/20"}`}>{n}</div>
-              {n !== total && <div className={`h-1 w-20 rounded ${n < step ? "bg-primary" : "bg-white/30"}`}></div>}
-            </div>
-          );
-        })}
+      <div className="flex flex-col md:flex-row items-center gap-4 mb-8">
+        <div className="w-full md:w-auto bg-gradient-to-r from-sky-700 to-emerald-600 text-white p-3 rounded-md shadow-md">
+          <div className="flex items-center gap-3">
+            {Array.from({ length: total }).map((_, i) => {
+              const n = i + 1;
+              const active = n === step;
+              const small = "w-10 h-10";
+              return (
+                <div key={n} className="flex items-center gap-3">
+                  <div className={`rounded-full grid place-items-center text-sm font-semibold ${active ? "bg-white text-sky-700" : "bg-white/20 text-white/90"} ${small}`}>
+                    {n}
+                  </div>
+                  {n !== total && <div className={`h-0.5 w-8 ${n < step ? "bg-white" : "bg-white/40"}`}></div>}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="flex-1 grid grid-cols-1 md:grid-cols-5 gap-3">
+          <div className="flex items-center gap-2 p-2 rounded-md">
+            <Calendar className="text-sky-100" />
+            <div className="text-xs">Personal</div>
+          </div>
+          <div className="flex items-center gap-2 p-2 rounded-md">
+            <Users className="text-sky-100" />
+            <div className="text-xs">Household</div>
+          </div>
+          <div className="flex items-center gap-2 p-2 rounded-md">
+            <ClipboardList className="text-sky-100" />
+            <div className="text-xs">Education</div>
+          </div>
+          <div className="flex items-center gap-2 p-2 rounded-md">
+            <Home className="text-sky-100" />
+            <div className="text-xs">Housing</div>
+          </div>
+          <div className="flex items-center gap-2 p-2 rounded-md">
+            <MapPin className="text-sky-100" />
+            <div className="text-xs">Location</div>
+          </div>
+        </div>
       </div>
 
       {step === 1 && (
