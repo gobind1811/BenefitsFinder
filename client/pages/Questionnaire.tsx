@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export default function Questionnaire() {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
-  const total = 7;
+  const total = 5;
   const [form, setForm] = useState({
     age: "",
     income: "",
