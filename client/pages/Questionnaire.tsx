@@ -76,88 +76,120 @@ export default function Questionnaire() {
       </div>
 
       {step === 1 && (
-        <form className="space-y-8">
-          <div>
-            <label className="block text-sm font-medium mb-1">Please enter your age:</label>
-            <p className="text-xs text-muted-foreground mb-2">Example: 30</p>
-            <input
-              type="number"
-              value={form.age}
-              onChange={(e) => setForm({ ...form, age: e.target.value })}
-              placeholder="Enter your age"
-              className="w-full h-11 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-ring"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-1">Please enter your annual income:</label>
-            <p className="text-xs text-muted-foreground mb-2">Example: ₹50,000</p>
-            <input
-              type="text"
-              value={form.income}
-              onChange={(e) => setForm({ ...form, income: e.target.value })}
-              placeholder="Enter your income"
-              className="w-full h-11 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-ring"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-1">Please enter your household size:</label>
-            <p className="text-xs text-muted-foreground mb-2">Example: 4</p>
-            <input
-              type="number"
-              value={form.household}
-              onChange={(e) => setForm({ ...form, household: e.target.value })}
-              placeholder="Enter household size"
-              className="w-full h-11 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-ring"
-            />
+        <div className="grid gap-6">
+          <div className="card fade-in grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div className="flex items-center justify-center bg-sky-50 rounded-md p-3 md:p-4">
+              <Calendar className="text-sky-600" />
+            </div>
+            <div className="md:col-span-2">
+              <label className="block text-sm font-medium mb-1">Please enter your age:</label>
+              <p className="text-xs text-muted-foreground mb-2">Example: 30</p>
+              <input
+                type="number"
+                value={form.age}
+                onChange={(e) => setForm({ ...form, age: e.target.value })}
+                placeholder="Enter your age"
+                className="w-full h-12 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-sky-300"
+              />
+            </div>
           </div>
 
-          <div>
-            <label className="block text-sm font-medium mb-1">Gender</label>
-            <p className="text-xs text-muted-foreground mb-2">Select your gender</p>
-            <select
-              value={form.gender}
-              onChange={(e) => setForm({ ...form, gender: e.target.value })}
-              className="w-full h-11 rounded-md border px-3 bg-white focus:outline-none focus:ring-2 focus:ring-ring"
-            >
-              <option value="">Select gender</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-              <option value="prefer_not_say">Prefer not to say</option>
-            </select>
+          <div className="card fade-in grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div className="flex items-center justify-center bg-emerald-50 rounded-md p-3 md:p-4">
+              <Wallet className="text-emerald-600" />
+            </div>
+            <div className="md:col-span-2">
+              <label className="block text-sm font-medium mb-1">Please enter your annual income:</label>
+              <p className="text-xs text-muted-foreground mb-2">Example: ₹50,000</p>
+              <input
+                type="text"
+                value={form.income}
+                onChange={(e) => setForm({ ...form, income: e.target.value })}
+                placeholder="Enter your income"
+                className="w-full h-12 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-emerald-300"
+              />
+            </div>
           </div>
 
-          <div>
-            <label className="block text-sm font-medium mb-1">Occupation</label>
-            <p className="text-xs text-muted-foreground mb-2">Select your occupation</p>
-            <select
-              value={form.occupation}
-              onChange={(e) => setForm({ ...form, occupation: e.target.value })}
-              className="w-full h-11 rounded-md border px-3 bg-white focus:outline-none focus:ring-2 focus:ring-ring"
-            >
-              <option value="">Select occupation</option>
-              <option value="employed">Employed</option>
-              <option value="self_employed">Self-employed</option>
-              <option value="student">Student</option>
-              <option value="unemployed">Unemployed</option>
-              <option value="retired">Retired</option>
-              <option value="homemaker">Homemaker</option>
-              <option value="other">Other</option>
-            </select>
+          <div className="card fade-in grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div className="flex items-center justify-center bg-violet-50 rounded-md p-3 md:p-4">
+              <Users className="text-violet-600" />
+            </div>
+            <div className="md:col-span-2">
+              <label className="block text-sm font-medium mb-1">Please enter your household size:</label>
+              <p className="text-xs text-muted-foreground mb-2">Example: 4</p>
+              <input
+                type="number"
+                value={form.household}
+                onChange={(e) => setForm({ ...form, household: e.target.value })}
+                placeholder="Enter household size"
+                className="w-full h-12 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-sky-300"
+              />
+            </div>
           </div>
 
-          <div>
-            <label className="block text-sm font-medium mb-1">Please enter your state:</label>
-            <p className="text-xs text-muted-foreground mb-2">Example: Punjab</p>
-            <input
-              type="text"
-              value={form.state}
-              onChange={(e) => setForm({ ...form, state: e.target.value })}
-              placeholder="Enter your state"
-              className="w-full h-11 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-ring"
-            />
+          <div className="card fade-in grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div className="flex items-center justify-center bg-sky-50 rounded-md p-3 md:p-4">
+              <User className="text-sky-600" />
+            </div>
+            <div className="md:col-span-2">
+              <label className="block text-sm font-medium mb-1">Gender</label>
+              <p className="text-xs text-muted-foreground mb-2">Select your gender</p>
+              <select
+                value={form.gender}
+                onChange={(e) => setForm({ ...form, gender: e.target.value })}
+                className="w-full h-12 rounded-md border px-3 bg-white focus:outline-none focus:ring-2 focus:ring-sky-300"
+              >
+                <option value="">Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                <option value="prefer_not_say">Prefer not to say</option>
+              </select>
+            </div>
           </div>
-        </form>
+
+          <div className="card fade-in grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div className="flex items-center justify-center bg-emerald-50 rounded-md p-3 md:p-4">
+              <Briefcase className="text-emerald-600" />
+            </div>
+            <div className="md:col-span-2">
+              <label className="block text-sm font-medium mb-1">Occupation</label>
+              <p className="text-xs text-muted-foreground mb-2">Select your occupation</p>
+              <select
+                value={form.occupation}
+                onChange={(e) => setForm({ ...form, occupation: e.target.value })}
+                className="w-full h-12 rounded-md border px-3 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-300"
+              >
+                <option value="">Select occupation</option>
+                <option value="employed">Employed</option>
+                <option value="self_employed">Self-employed</option>
+                <option value="student">Student</option>
+                <option value="unemployed">Unemployed</option>
+                <option value="retired">Retired</option>
+                <option value="homemaker">Homemaker</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="card fade-in grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div className="flex items-center justify-center bg-sky-50 rounded-md p-3 md:p-4">
+              <MapPin className="text-sky-600" />
+            </div>
+            <div className="md:col-span-2">
+              <label className="block text-sm font-medium mb-1">Please enter your state:</label>
+              <p className="text-xs text-muted-foreground mb-2">Example: Punjab</p>
+              <input
+                type="text"
+                value={form.state}
+                onChange={(e) => setForm({ ...form, state: e.target.value })}
+                placeholder="Enter your state"
+                className="w-full h-12 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-sky-300"
+              />
+            </div>
+          </div>
+        </div>
       )}
 
       {step === 2 && (
