@@ -3,9 +3,9 @@ import { Search } from "lucide-react";
 
 export default function Index() {
   return (
-    <section className="relative min-h-screen flex items-center text-center overflow-hidden">
-      {/* Background blobs */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/10 via-accent/5 to-white"></div>
+    <section className="relative min-h-screen flex items-center text-center overflow-hidden hero-bg">
+      {/* Dark overlay */}
+      <div className="hero-overlay"></div>
       <svg className="absolute -left-40 -top-40 w-[600px] opacity-40 -z-20" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden>
         <defs>
           <linearGradient id="g1" x1="0" x2="1">
