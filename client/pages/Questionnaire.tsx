@@ -159,8 +159,110 @@ export default function Questionnaire() {
         </form>
       )}
 
-      {step > 1 && (
-        <div className="bg-accent/60 border rounded-md p-6 text-sm">This step is a placeholder. Continue to proceed to Results.</div>
+      {step === 2 && (
+        <form className="space-y-6">
+          <div>
+            <label className="block text-sm font-medium mb-1">Marital status</label>
+            <p className="text-xs text-muted-foreground mb-2">Select your marital status</p>
+            <select
+              value={form.maritalStatus}
+              onChange={(e) => setForm({ ...form, maritalStatus: e.target.value })}
+              className="w-full h-11 rounded-md border px-3 bg-white focus:outline-none focus:ring-2 focus:ring-ring"
+            >
+              <option value="">Select</option>
+              <option value="single">Single</option>
+              <option value="married">Married</option>
+              <option value="divorced">Divorced</option>
+              <option value="widowed">Widowed</option>
+            </select>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium mb-1">Number of dependents</label>
+            <p className="text-xs text-muted-foreground mb-2">Example: 2</p>
+            <input
+              type="number"
+              value={form.dependents}
+              onChange={(e) => setForm({ ...form, dependents: e.target.value })}
+              placeholder="Enter number of dependents"
+              className="w-full h-11 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-ring"
+            />
+          </div>
+        </form>
+      )}
+
+      {step === 3 && (
+        <form className="space-y-6">
+          <div>
+            <label className="block text-sm font-medium mb-1">Education level</label>
+            <p className="text-xs text-muted-foreground mb-2">Select highest education level</p>
+            <select
+              value={form.education}
+              onChange={(e) => setForm({ ...form, education: e.target.value })}
+              className="w-full h-11 rounded-md border px-3 bg-white focus:outline-none focus:ring-2 focus:ring-ring"
+            >
+              <option value="">Select</option>
+              <option value="no_formal">No formal education</option>
+              <option value="primary">Primary</option>
+              <option value="secondary">Secondary</option>
+              <option value="higher_secondary">Higher Secondary</option>
+              <option value="graduate">Graduate</option>
+              <option value="postgraduate">Postgraduate</option>
+            </select>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium mb-1">Disability status</label>
+            <p className="text-xs text-muted-foreground mb-2">Do you identify as having a disability?</p>
+            <div className="flex gap-4">
+              <label className="inline-flex items-center gap-2"><input type="radio" name="disability" checked={form.disability === "no"} onChange={() => setForm({ ...form, disability: "no" })} /> No</label>
+              <label className="inline-flex items-center gap-2"><input type="radio" name="disability" checked={form.disability === "yes"} onChange={() => setForm({ ...form, disability: "yes" })} /> Yes</label>
+              <label className="inline-flex items-center gap-2"><input type="radio" name="disability" checked={form.disability === "prefer_not"} onChange={() => setForm({ ...form, disability: "prefer_not" })} /> Prefer not to say</label>
+            </div>
+          </div>
+        </form>
+      )}
+
+      {step === 4 && (
+        <form className="space-y-6">
+          <div>
+            <label className="block text-sm font-medium mb-1">Current housing</label>
+            <p className="text-xs text-muted-foreground mb-2">Select your current housing situation</p>
+            <select
+              value={form.housing}
+              onChange={(e) => setForm({ ...form, housing: e.target.value })}
+              className="w-full h-11 rounded-md border px-3 bg-white focus:outline-none focus:ring-2 focus:ring-ring"
+            >
+              <option value="">Select</option>
+              <option value="own">Own</option>
+              <option value="rent">Rent</option>
+              <option value="shelter">Shelter</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium mb-1">Receiving benefits</label>
+            <p className="text-xs text-muted-foreground mb-2">Select any public benefits you already receive</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+              {[
+                { key: "healthcare", label: "Healthcare Assistance" },
+                { key: "housing", label: "Housing Support" },
+                { key: "food", label: "Food Assistance" },
+                { key: "education", label: "Educational Grants" },
+              ].map((b) => (
+                <label key={b.key} className="inline-flex items-center gap-2 border rounded px-3 py-2">
+                  <input type="checkbox" checked={form.benefits.includes(b.key)} onChange={() => toggleBenefit(b.key)} />
+                  <span className="ml-2">{b.label}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+        </form>
+      )}
+
+      {step > 4 && (
+        <div className="bg-accent/60 border rounded-md p-6 text-sm">Review your answers and click Finish to see results.</div>
       )}
 
       <div className="mt-10 flex items-center justify-between">
