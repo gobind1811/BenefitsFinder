@@ -25,6 +25,7 @@ const App = () => (
           <Route path="/" element={<Layout />}>
             <Route index element={<Index />} />
             <Route path="questionnaire" element={<Questionnaire />} />
+            <Route path="login" element={<Login />} />
             <Route path="results" element={<Placeholder title="Eligible Public-Aid Programs" />} />
             <Route path="resources" element={<Placeholder title="Resources" />} />
             <Route path="feedback" element={<Placeholder title="We Value Your Feedback" />} />
