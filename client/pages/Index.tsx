@@ -7,7 +7,7 @@ export default function Index() {
       <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary">
         <Search size={36} />
       </div>
-      <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">BenefitsFinder</h1>
+      <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-bright-gradient">BenefitsFinder</h1>
       <p className="mt-4 max-w-2xl text-muted-foreground">
         Discover eligible public-aid programs quickly and easily with BenefitsFinder. Our service
         guides you through the process to ensure you get the support you need.
