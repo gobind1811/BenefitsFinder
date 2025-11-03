@@ -31,6 +31,9 @@ export default function Header() {
               {item.label}
             </NavLink>
           ))}
+          <NavLink to="/login" className={({ isActive }) => `${navLinkBase} ${isActive ? "bg-primary text-white" : "text-foreground/80"}`}>
+            Login
+          </NavLink>
         </nav>
       </div>
     </header>

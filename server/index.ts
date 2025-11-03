@@ -19,5 +19,15 @@ export function createServer() {
 
   app.get("/api/demo", handleDemo);
 
+  // DigiLocker OAuth endpoints (server-side helpers)
+  try {
+    const { initDigilocker, digilockerCallback } = await import("./routes/digilocker");
+    app.get("/api/auth/digilocker/init", initDigilocker);
+    app.get("/api/auth/digilocker/callback", digilockerCallback);
+  } catch (e) {
+    // If the file is missing, ignore. This keeps dev server stable.
+    console.warn("Digilocker routes not available:", e);
+  }
+
   return app;
 }
