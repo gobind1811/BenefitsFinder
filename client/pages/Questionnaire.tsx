@@ -5,7 +5,7 @@ export default function Questionnaire() {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const total = 4;
-  const [form, setForm] = useState({ age: "", income: "", household: "", state: "" });
+  const [form, setForm] = useState({ age: "", income: "", household: "", state: "", gender: "", occupation: "" });
 
   const canNext = useMemo(() => {
     if (step === 1) {
