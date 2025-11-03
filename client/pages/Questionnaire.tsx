@@ -1,6 +1,15 @@
 import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Calendar, Wallet, Users, MapPin, User, Briefcase, Home, ClipboardList } from "lucide-react";
+import {
+  Calendar,
+  Wallet,
+  Users,
+  MapPin,
+  User,
+  Briefcase,
+  Home,
+  ClipboardList,
+} from "lucide-react";
 
 export default function Questionnaire() {
   const navigate = useNavigate();
@@ -24,7 +33,12 @@ export default function Questionnaire() {
   const toggleBenefit = (value: string) => {
     setForm((f) => {
       const has = f.benefits.includes(value);
-      return { ...f, benefits: has ? f.benefits.filter((b) => b !== value) : [...f.benefits, value] };
+      return {
+        ...f,
+        benefits: has
+          ? f.benefits.filter((b) => b !== value)
+          : [...f.benefits, value],
+      };
     });
   };
 
@@ -71,10 +85,16 @@ export default function Questionnaire() {
               const small = "w-10 h-10";
               return (
                 <div key={n} className="flex items-center gap-3">
-                  <div className={`rounded-full grid place-items-center text-sm font-semibold ${active ? "bg-white text-sky-700" : "bg-white/20 text-white/90"} ${small}`}>
+                  <div
+                    className={`rounded-full grid place-items-center text-sm font-semibold ${active ? "bg-white text-sky-700" : "bg-white/20 text-white/90"} ${small}`}
+                  >
                     {n}
                   </div>
-                  {n !== total && <div className={`h-0.5 w-8 ${n < step ? "bg-white" : "bg-white/40"}`}></div>}
+                  {n !== total && (
+                    <div
+                      className={`h-0.5 w-8 ${n < step ? "bg-white" : "bg-white/40"}`}
+                    ></div>
+                  )}
                 </div>
               );
             })}
@@ -112,7 +132,9 @@ export default function Questionnaire() {
               <Calendar className="text-sky-600" />
             </div>
             <div className="md:col-span-2">
-              <label className="block text-sm font-medium mb-1">Please enter your age:</label>
+              <label className="block text-sm font-medium mb-1">
+                Please enter your age:
+              </label>
               <p className="text-xs text-muted-foreground mb-2">Example: 30</p>
               <input
                 type="number"
@@ -129,8 +151,12 @@ export default function Questionnaire() {
               <Wallet className="text-emerald-600" />
             </div>
             <div className="md:col-span-2">
-              <label className="block text-sm font-medium mb-1">Please enter your annual income:</label>
-              <p className="text-xs text-muted-foreground mb-2">Example: ₹50,000</p>
+              <label className="block text-sm font-medium mb-1">
+                Please enter your annual income:
+              </label>
+              <p className="text-xs text-muted-foreground mb-2">
+                Example: ₹50,000
+              </p>
               <input
                 type="text"
                 value={form.income}
@@ -146,12 +172,16 @@ export default function Questionnaire() {
               <Users className="text-violet-600" />
             </div>
             <div className="md:col-span-2">
-              <label className="block text-sm font-medium mb-1">Please enter your household size:</label>
+              <label className="block text-sm font-medium mb-1">
+                Please enter your household size:
+              </label>
               <p className="text-xs text-muted-foreground mb-2">Example: 4</p>
               <input
                 type="number"
                 value={form.household}
-                onChange={(e) => setForm({ ...form, household: e.target.value })}
+                onChange={(e) =>
+                  setForm({ ...form, household: e.target.value })
+                }
                 placeholder="Enter household size"
                 className="w-full h-12 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-sky-300"
               />
@@ -164,7 +194,9 @@ export default function Questionnaire() {
             </div>
             <div className="md:col-span-2">
               <label className="block text-sm font-medium mb-1">Gender</label>
-              <p className="text-xs text-muted-foreground mb-2">Select your gender</p>
+              <p className="text-xs text-muted-foreground mb-2">
+                Select your gender
+              </p>
               <select
                 value={form.gender}
                 onChange={(e) => setForm({ ...form, gender: e.target.value })}
@@ -184,11 +216,17 @@ export default function Questionnaire() {
               <Briefcase className="text-emerald-600" />
             </div>
             <div className="md:col-span-2">
-              <label className="block text-sm font-medium mb-1">Occupation</label>
-              <p className="text-xs text-muted-foreground mb-2">Select your occupation</p>
+              <label className="block text-sm font-medium mb-1">
+                Occupation
+              </label>
+              <p className="text-xs text-muted-foreground mb-2">
+                Select your occupation
+              </p>
               <select
                 value={form.occupation}
-                onChange={(e) => setForm({ ...form, occupation: e.target.value })}
+                onChange={(e) =>
+                  setForm({ ...form, occupation: e.target.value })
+                }
                 className="w-full h-12 rounded-md border px-3 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-300"
               >
                 <option value="">Select occupation</option>
@@ -208,8 +246,12 @@ export default function Questionnaire() {
               <MapPin className="text-sky-600" />
             </div>
             <div className="md:col-span-2">
-              <label className="block text-sm font-medium mb-1">Please enter your state:</label>
-              <p className="text-xs text-muted-foreground mb-2">Example: Punjab</p>
+              <label className="block text-sm font-medium mb-1">
+                Please enter your state:
+              </label>
+              <p className="text-xs text-muted-foreground mb-2">
+                Example: Punjab
+              </p>
               <input
                 type="text"
                 value={form.state}
@@ -229,11 +271,17 @@ export default function Questionnaire() {
               <Users className="text-sky-600" />
             </div>
             <div className="md:col-span-2">
-              <label className="block text-sm font-medium mb-1">Marital status</label>
-              <p className="text-xs text-muted-foreground mb-2">Select your marital status</p>
+              <label className="block text-sm font-medium mb-1">
+                Marital status
+              </label>
+              <p className="text-xs text-muted-foreground mb-2">
+                Select your marital status
+              </p>
               <select
                 value={form.maritalStatus}
-                onChange={(e) => setForm({ ...form, maritalStatus: e.target.value })}
+                onChange={(e) =>
+                  setForm({ ...form, maritalStatus: e.target.value })
+                }
                 className="w-full h-12 rounded-md border px-3 bg-white focus:outline-none focus:ring-2 focus:ring-sky-300"
               >
                 <option value="">Select</option>
@@ -250,12 +298,16 @@ export default function Questionnaire() {
               <Users className="text-sky-600" />
             </div>
             <div className="md:col-span-2">
-              <label className="block text-sm font-medium mb-1">Number of dependents</label>
+              <label className="block text-sm font-medium mb-1">
+                Number of dependents
+              </label>
               <p className="text-xs text-muted-foreground mb-2">Example: 2</p>
               <input
                 type="number"
                 value={form.dependents}
-                onChange={(e) => setForm({ ...form, dependents: e.target.value })}
+                onChange={(e) =>
+                  setForm({ ...form, dependents: e.target.value })
+                }
                 placeholder="Enter number of dependents"
                 className="w-full h-12 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-sky-300"
               />
@@ -271,11 +323,17 @@ export default function Questionnaire() {
               <ClipboardList className="text-sky-600" />
             </div>
             <div className="md:col-span-2">
-              <label className="block text-sm font-medium mb-1">Education level</label>
-              <p className="text-xs text-muted-foreground mb-2">Select highest education level</p>
+              <label className="block text-sm font-medium mb-1">
+                Education level
+              </label>
+              <p className="text-xs text-muted-foreground mb-2">
+                Select highest education level
+              </p>
               <select
                 value={form.education}
-                onChange={(e) => setForm({ ...form, education: e.target.value })}
+                onChange={(e) =>
+                  setForm({ ...form, education: e.target.value })
+                }
                 className="w-full h-12 rounded-md border px-3 bg-white focus:outline-none focus:ring-2 focus:ring-sky-300"
               >
                 <option value="">Select</option>
@@ -294,12 +352,42 @@ export default function Questionnaire() {
               <Users className="text-sky-600" />
             </div>
             <div className="md:col-span-2">
-              <label className="block text-sm font-medium mb-1">Disability status</label>
-              <p className="text-xs text-muted-foreground mb-2">Do you identify as having a disability?</p>
+              <label className="block text-sm font-medium mb-1">
+                Disability status
+              </label>
+              <p className="text-xs text-muted-foreground mb-2">
+                Do you identify as having a disability?
+              </p>
               <div className="flex gap-4">
-                <label className="inline-flex items-center gap-2"><input type="radio" name="disability" checked={form.disability === "no"} onChange={() => setForm({ ...form, disability: "no" })} /> No</label>
-                <label className="inline-flex items-center gap-2"><input type="radio" name="disability" checked={form.disability === "yes"} onChange={() => setForm({ ...form, disability: "yes" })} /> Yes</label>
-                <label className="inline-flex items-center gap-2"><input type="radio" name="disability" checked={form.disability === "prefer_not"} onChange={() => setForm({ ...form, disability: "prefer_not" })} /> Prefer not to say</label>
+                <label className="inline-flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="disability"
+                    checked={form.disability === "no"}
+                    onChange={() => setForm({ ...form, disability: "no" })}
+                  />{" "}
+                  No
+                </label>
+                <label className="inline-flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="disability"
+                    checked={form.disability === "yes"}
+                    onChange={() => setForm({ ...form, disability: "yes" })}
+                  />{" "}
+                  Yes
+                </label>
+                <label className="inline-flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="disability"
+                    checked={form.disability === "prefer_not"}
+                    onChange={() =>
+                      setForm({ ...form, disability: "prefer_not" })
+                    }
+                  />{" "}
+                  Prefer not to say
+                </label>
               </div>
             </div>
           </div>
@@ -309,8 +397,12 @@ export default function Questionnaire() {
       {step === 4 && (
         <form className="space-y-6">
           <div>
-            <label className="block text-sm font-medium mb-1">Current housing</label>
-            <p className="text-xs text-muted-foreground mb-2">Select your current housing situation</p>
+            <label className="block text-sm font-medium mb-1">
+              Current housing
+            </label>
+            <p className="text-xs text-muted-foreground mb-2">
+              Select your current housing situation
+            </p>
             <select
               value={form.housing}
               onChange={(e) => setForm({ ...form, housing: e.target.value })}
@@ -325,8 +417,12 @@ export default function Questionnaire() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1">Receiving benefits</label>
-            <p className="text-xs text-muted-foreground mb-2">Select any public benefits you already receive</p>
+            <label className="block text-sm font-medium mb-1">
+              Receiving benefits
+            </label>
+            <p className="text-xs text-muted-foreground mb-2">
+              Select any public benefits you already receive
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               {[
                 { key: "healthcare", label: "Healthcare Assistance" },
@@ -334,8 +430,15 @@ export default function Questionnaire() {
                 { key: "food", label: "Food Assistance" },
                 { key: "education", label: "Educational Grants" },
               ].map((b) => (
-                <label key={b.key} className="inline-flex items-center gap-2 border rounded px-3 py-2">
-                  <input type="checkbox" checked={form.benefits.includes(b.key)} onChange={() => toggleBenefit(b.key)} />
+                <label
+                  key={b.key}
+                  className="inline-flex items-center gap-2 border rounded px-3 py-2"
+                >
+                  <input
+                    type="checkbox"
+                    checked={form.benefits.includes(b.key)}
+                    onChange={() => toggleBenefit(b.key)}
+                  />
                   <span className="ml-2">{b.label}</span>
                 </label>
               ))}
@@ -346,8 +449,13 @@ export default function Questionnaire() {
 
       {step === 5 && (
         <div className="bg-accent/60 border rounded-md p-6 text-sm">
-          <h3 className="text-lg font-semibold mb-3">Please recheck your answers</h3>
-          <p className="mb-4">Review the information below and go back to edit any answer before confirming.</p>
+          <h3 className="text-lg font-semibold mb-3">
+            Please recheck your answers
+          </h3>
+          <p className="mb-4">
+            Review the information below and go back to edit any answer before
+            confirming.
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 text-sm">
             <div className="space-y-1">
@@ -396,7 +504,9 @@ export default function Questionnaire() {
             </div>
             <div className="space-y-1">
               <div className="font-medium">Receiving benefits</div>
-              <div>{form.benefits.length ? form.benefits.join(", ") : "None"}</div>
+              <div>
+                {form.benefits.length ? form.benefits.join(", ") : "None"}
+              </div>
             </div>
           </div>
         </div>
@@ -405,13 +515,34 @@ export default function Questionnaire() {
       <div className="mt-10 flex items-center justify-between">
         {step === 5 ? (
           <>
-            <button onClick={() => setStep(1)} className="px-4 py-2 rounded-md border text-sm hover:bg-secondary">Edit Answers</button>
-            <button onClick={() => navigate('/results')} className="px-5 py-2 rounded-md bg-primary text-white">Confirm & Finish</button>
+            <button
+              onClick={() => setStep(1)}
+              className="px-4 py-2 rounded-md border text-sm hover:bg-secondary"
+            >
+              Edit Answers
+            </button>
+            <button
+              onClick={() => navigate("/results")}
+              className="px-5 py-2 rounded-md bg-primary text-white"
+            >
+              Confirm & Finish
+            </button>
           </>
         ) : (
           <>
-            <button onClick={prev} className="px-4 py-2 rounded-md border text-sm hover:bg-secondary">Previous</button>
-            <button disabled={!canNext} onClick={next} className="px-5 py-2 rounded-md bg-primary text-white disabled:opacity-50">{step < total ? "Next" : "Finish"}</button>
+            <button
+              onClick={prev}
+              className="px-4 py-2 rounded-md border text-sm hover:bg-secondary"
+            >
+              Previous
+            </button>
+            <button
+              disabled={!canNext}
+              onClick={next}
+              className="px-5 py-2 rounded-md bg-primary text-white disabled:opacity-50"
+            >
+              {step < total ? "Next" : "Finish"}
+            </button>
           </>
         )}
       </div>

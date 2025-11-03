@@ -103,11 +103,29 @@
     @apply border-border;
   }
 
-  html { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+  html {
+    font-family:
+      Inter,
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial;
+  }
 
   body {
     @apply bg-background text-foreground;
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    font-family:
+      Inter,
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.6;
@@ -121,26 +139,54 @@
 
   /* Display heading uses Playfair Display for a classic contrast */
   h1 {
-    font-family: 'Playfair Display', Poppins, Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    font-family:
+      "Playfair Display",
+      Poppins,
+      Inter,
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial;
     font-size: 3rem;
     font-weight: 700;
     color: hsl(var(--primary));
     /* bright gradient effect */
-    background: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    background: linear-gradient(
+      90deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--accent)) 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
   }
 
-  h2 { font-family: Poppins, Inter, system-ui; font-size: 1.75rem; font-weight: 700; color: hsl(var(--foreground)); }
-  h3 { font-family: Poppins, Inter, system-ui; font-size: 1.25rem; font-weight: 600; color: hsl(var(--foreground)); }
+  h2 {
+    font-family: Poppins, Inter, system-ui;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: hsl(var(--foreground));
+  }
+  h3 {
+    font-family: Poppins, Inter, system-ui;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: hsl(var(--foreground));
+  }
 
   /* Utility classes for mixed bright/dark text */
   .text-bright {
     color: hsl(var(--primary));
   }
   .text-bright-gradient {
-    background: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    background: linear-gradient(
+      90deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--accent)) 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -187,14 +233,20 @@
 .card {
   background: white;
   border-radius: 0.75rem;
-  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
   padding: 1.25rem;
 }
 
 /* Subtle fade-in animation for step transitions */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .fade-in {
   animation: fadeInUp 320ms ease;
@@ -202,7 +254,9 @@
 
 /* Button hover animations */
 .btn-primary {
-  transition: transform 160ms ease, box-shadow 160ms ease;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
 }
 .btn-primary:hover {
   transform: translateY(-2px);
