@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Search } from "lucide-react";
 
 export default function Index() {
   return (
@@ -16,11 +15,7 @@ export default function Index() {
         <circle cx="300" cy="300" r="260" fill="url(#g1)" />
       </svg>
 
-      <div className="container relative z-10 py-24 flex flex-col items-center justify-center">
-        <div className="mb-6 inline-flex items-center justify-center w-20 h-20 rounded-full bg-white/20 text-white ring-1 ring-white/20 shadow-lg">
-          <Search size={36} />
-        </div>
-
+      <div className="container relative z-10 py-24 flex flex-col items-center justify-center hero-content">
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-bright-gradient drop-shadow-md">BenefitsFinder</h1>
 
         <p className="mt-4 max-w-3xl text-white/90 text-lg md:text-xl">
