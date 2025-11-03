@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { Search } from "lucide-react";
 
 const navLinkBase = "px-3 py-2 text-sm font-medium rounded-md hover:bg-secondary hover:text-foreground transition";
+const navDefault = "text-dark-muted";
 
 export default function Header() {
   return (
