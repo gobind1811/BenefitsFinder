@@ -261,13 +261,76 @@ export default function Questionnaire() {
         </form>
       )}
 
-      {step > 4 && (
-        <div className="bg-accent/60 border rounded-md p-6 text-sm">Review your answers and click Finish to see results.</div>
+      {step === 5 && (
+        <div className="bg-accent/60 border rounded-md p-6 text-sm">
+          <h3 className="text-lg font-semibold mb-3">Please recheck your answers</h3>
+          <p className="mb-4">Review the information below and go back to edit any answer before confirming.</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 text-sm">
+            <div className="space-y-1">
+              <div className="font-medium">Age</div>
+              <div>{form.age || "—"}</div>
+            </div>
+            <div className="space-y-1">
+              <div className="font-medium">Income</div>
+              <div>{form.income || "—"}</div>
+            </div>
+            <div className="space-y-1">
+              <div className="font-medium">Household Size</div>
+              <div>{form.household || "—"}</div>
+            </div>
+            <div className="space-y-1">
+              <div className="font-medium">State</div>
+              <div>{form.state || "—"}</div>
+            </div>
+            <div className="space-y-1">
+              <div className="font-medium">Gender</div>
+              <div>{form.gender || "—"}</div>
+            </div>
+            <div className="space-y-1">
+              <div className="font-medium">Occupation</div>
+              <div>{form.occupation || "—"}</div>
+            </div>
+            <div className="space-y-1">
+              <div className="font-medium">Marital Status</div>
+              <div>{form.maritalStatus || "—"}</div>
+            </div>
+            <div className="space-y-1">
+              <div className="font-medium">Dependents</div>
+              <div>{form.dependents || "—"}</div>
+            </div>
+            <div className="space-y-1">
+              <div className="font-medium">Education</div>
+              <div>{form.education || "—"}</div>
+            </div>
+            <div className="space-y-1">
+              <div className="font-medium">Disability</div>
+              <div>{form.disability || "—"}</div>
+            </div>
+            <div className="space-y-1">
+              <div className="font-medium">Housing</div>
+              <div>{form.housing || "—"}</div>
+            </div>
+            <div className="space-y-1">
+              <div className="font-medium">Receiving benefits</div>
+              <div>{form.benefits.length ? form.benefits.join(", ") : "None"}</div>
+            </div>
+          </div>
+        </div>
       )}
 
       <div className="mt-10 flex items-center justify-between">
-        <button onClick={prev} className="px-4 py-2 rounded-md border text-sm hover:bg-secondary">Previous</button>
-        <button disabled={!canNext} onClick={next} className="px-5 py-2 rounded-md bg-primary text-white disabled:opacity-50">{step < total ? "Next" : "Finish"}</button>
+        {step === 5 ? (
+          <>
+            <button onClick={() => setStep(1)} className="px-4 py-2 rounded-md border text-sm hover:bg-secondary">Edit Answers</button>
+            <button onClick={() => navigate('/results')} className="px-5 py-2 rounded-md bg-primary text-white">Confirm & Finish</button>
+          </>
+        ) : (
+          <>
+            <button onClick={prev} className="px-4 py-2 rounded-md border text-sm hover:bg-secondary">Previous</button>
+            <button disabled={!canNext} onClick={next} className="px-5 py-2 rounded-md bg-primary text-white disabled:opacity-50">{step < total ? "Next" : "Finish"}</button>
+          </>
+        )}
       </div>
     </section>
   );
