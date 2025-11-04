@@ -74,7 +74,7 @@ export default function SchemeCarousel() {
             loading="eager"
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(255,152,0,0.25)] via-[rgba(255,255,255,0.0)] to-[rgba(34,197,94,0.15)] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(106,27,154,0.18)] via-[rgba(0,0,0,0.28)] to-[rgba(106,27,154,0.10)] pointer-events-none"></div>
       </div>
 
       <div className="container relative z-10 py-16 md:py-28">
@@ -82,8 +82,8 @@ export default function SchemeCarousel() {
           <div className="w-full md:w-1/2 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
               <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                <circle cx="12" cy="12" r="10" stroke="#F57C00" strokeWidth="1.2" fill="white" />
-                <path d="M12 4v8l3 3" stroke="#2E6E2F" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                <circle cx="12" cy="12" r="10" stroke="hsl(var(--primary))" strokeWidth="1.2" fill="white" />
+                <path d="M12 4v8l3 3" stroke="hsl(var(--foreground))" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               <span className="text-sm font-semibold text-white/95 tracking-wide">Official Government Services</span>
             </div>
@@ -97,19 +97,19 @@ export default function SchemeCarousel() {
                   href={slides[index].cta.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-[#F57C00] text-white font-semibold shadow btn-primary"
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-[hsl(var(--primary))] text-white font-semibold shadow btn-primary"
                 >
                   {slides[index].cta.text}
                 </a>
               ) : (
-                <Link to={slides[index].cta.url} className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-[#F57C00] text-white font-semibold shadow btn-primary">
+                <Link to={slides[index].cta.url} className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-[hsl(var(--primary))] text-white font-semibold shadow btn-primary">
                   {slides[index].cta.text}
                 </Link>
               )}
 
               <a
                 href="/resources"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-white/30 text-white bg-white/5"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-[rgba(255,255,255,0.06)] text-white bg-[rgba(255,255,255,0.02)]"
               >
                 Browse Schemes
               </a>
@@ -129,25 +129,25 @@ export default function SchemeCarousel() {
 
           <div className="hidden md:block md:w-1/2">
             {/* decorative right-side card with emblem and quick links */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-lg p-6 shadow-md">
+            <div className="bg-[rgba(255,255,255,0.03)] backdrop-blur-sm rounded-lg p-6 shadow-md">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#FF9933]">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[hsl(var(--primary))]">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
                     <path d="M12 2a10 10 0 100 20 10 10 0 000-20z" fill="#fff" opacity="0.2" />
-                    <path d="M12 7v5l3 3" stroke="#2E6E2F" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M12 7v5l3 3" stroke="hsl(var(--foreground))" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-slate-900">Apply for Schemes</h3>
-                  <p className="text-sm text-slate-700">Find the right schemes for your needs and apply easily.</p>
+                  <h3 className="text-lg font-semibold text-white">Apply for Schemes</h3>
+                  <p className="text-sm text-white/80">Find the right schemes for your needs and apply easily.</p>
                 </div>
               </div>
 
               <div className="mt-6 grid grid-cols-2 gap-3">
-                <a href="/resources#education" className="block text-left px-3 py-2 rounded-md bg-white text-slate-800 border">Education</a>
-                <a href="/resources#women" className="block text-left px-3 py-2 rounded-md bg-white text-slate-800 border">Women</a>
-                <a href="/resources#agriculture" className="block text-left px-3 py-2 rounded-md bg-white text-slate-800 border">Agriculture</a>
-                <a href="/resources#housing" className="block text-left px-3 py-2 rounded-md bg-white text-slate-800 border">Housing</a>
+                <a href="/resources#education" className="block text-left px-3 py-2 rounded-md bg-[rgba(255,255,255,0.04)] text-white/90 border border-[rgba(255,255,255,0.06)]">Education</a>
+                <a href="/resources#women" className="block text-left px-3 py-2 rounded-md bg-[rgba(255,255,255,0.04)] text-white/90 border border-[rgba(255,255,255,0.06)]">Women</a>
+                <a href="/resources#agriculture" className="block text-left px-3 py-2 rounded-md bg-[rgba(255,255,255,0.04)] text-white/90 border border-[rgba(255,255,255,0.06)]">Agriculture</a>
+                <a href="/resources#housing" className="block text-left px-3 py-2 rounded-md bg-[rgba(255,255,255,0.04)] text-white/90 border border-[rgba(255,255,255,0.06)]">Housing</a>
               </div>
             </div>
           </div>
