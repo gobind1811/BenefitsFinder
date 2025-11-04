@@ -29,7 +29,7 @@ const App = () => (
             <Route path="questionnaire" element={<Questionnaire />} />
             <Route path="login" element={<Login />} />
             <Route path="results" element={<Results />} />
-            <Route path="resources" element={<Placeholder title="Resources" />} />
+            <Route path="resources" element={<Resources />} />
             <Route path="feedback" element={<Placeholder title="We Value Your Feedback" />} />
             <Route path="*" element={<NotFound />} />
           </Route>
