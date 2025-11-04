@@ -171,13 +171,13 @@
     font-family: Poppins, Inter, system-ui;
     font-size: 1.75rem;
     font-weight: 700;
-    color: hsl(var(--foreground));
+    color: hsl(var(--primary));
   }
   h3 {
     font-family: Poppins, Inter, system-ui;
     font-size: 1.25rem;
     font-weight: 600;
-    color: hsl(var(--foreground));
+    color: hsl(var(--primary));
   }
 
   /* Utility classes for mixed bright/dark text */
