@@ -112,28 +112,28 @@ export default function SchemeCarousel(): JSX.Element {
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight drop-shadow-lg">
-              {slides[index].title}
+              {t(`${slides[index].key}.title`)}
             </h2>
             <p className="mt-3 text-white/90 text-lg md:text-xl max-w-2xl">
-              {slides[index].desc}
+              {t(`${slides[index].key}.desc`)}
             </p>
 
             <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
-              {slides[index].cta.external ? (
+              {slides[index].external ? (
                 <a
-                  href={slides[index].cta.url}
+                  href={slides[index].ctaUrl}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-primary text-white font-semibold shadow btn-primary glow"
                 >
-                  {slides[index].cta.text}
+                  {t(`${slides[index].key}.cta`)}
                 </a>
               ) : (
                 <Link
-                  to={slides[index].cta.url}
+                  to={slides[index].ctaUrl}
                   className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-primary text-white font-semibold shadow btn-primary glow"
                 >
-                  {slides[index].cta.text}
+                  {t(`${slides[index].key}.cta`)}
                 </Link>
               )}
 
@@ -141,7 +141,7 @@ export default function SchemeCarousel(): JSX.Element {
                 href="/resources"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-[rgba(255,255,255,0.06)] text-white bg-[rgba(255,255,255,0.02)]"
               >
-                Browse Schemes
+                {t("nav.resources")}
               </a>
             </div>
 
