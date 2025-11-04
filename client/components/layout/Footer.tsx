@@ -30,7 +30,7 @@ export default function Footer() {
           </a>
         </nav>
         <p>
-          © {new Date().getFullYear()} UpWise. All rights reserved.
+          © {new Date().getFullYear()} benefitfinder. All rights reserved.
         </p>
       </div>
     </footer>
