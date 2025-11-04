@@ -37,6 +37,7 @@ const slides = [
 import { useI18n } from "../../lib/i18n";
 
 export default function SchemeCarousel(): JSX.Element {
+  const { t } = useI18n();
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const intervalRef = useRef<number | null>(null);
