@@ -44,6 +44,7 @@ const schemes = [
 ];
 
 export default function Results() {
+  const { t } = useI18n();
   return (
     <section className="container py-8">
       <div className="flex items-center justify-between mb-6">
