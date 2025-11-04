@@ -257,13 +257,19 @@
 
 /* Button hover animations */
 .btn-primary {
-  transition:
-    transform 160ms ease,
-    box-shadow 160ms ease;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  box-shadow: 0 6px 20px rgba(var(--primary-rgb), 0.14);
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(14, 165, 233, 0.12);
+  box-shadow: 0 12px 40px rgba(var(--primary-rgb), 0.22), 0 2px 8px rgba(0,0,0,0.35);
+}
+
+/* Subtle violet glow for emphasis */
+.btn-primary.glow {
+  box-shadow: 0 12px 40px rgba(var(--primary-rgb), 0.24);
 }
 
 .btn-ghost:hover {
