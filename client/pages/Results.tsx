@@ -101,7 +101,7 @@ export default function Results() {
           to="/questionnaire"
           className="block w-full text-center px-4 py-3 bg-primary text-white rounded-md shadow"
         >
-          Start a New Search
+          {t("results.start_search")}
         </Link>
       </div>
     </section>
