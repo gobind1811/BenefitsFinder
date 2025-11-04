@@ -1,6 +1,7 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Search } from "lucide-react";
 import { useI18n } from "../../lib/i18n";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const navLinkBase =
   "px-3 py-2 text-sm font-medium rounded-md hover:bg-secondary hover:text-foreground transition";
