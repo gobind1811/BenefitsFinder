@@ -67,7 +67,7 @@ export default function SchemeCarousel(): JSX.Element {
           <img
             key={s.id}
             src={s.img}
-            alt={s.title}
+            alt={t(`${s.key}.title`)}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
               i === index ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
