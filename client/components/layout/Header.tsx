@@ -31,13 +31,13 @@ export default function Header() {
             BenefitFinder
           </span>
         </Link>
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden md:flex items-center gap-2">
           {[
-            { to: "/", label: "Welcome" },
-            { to: "/questionnaire", label: "Questionnaire" },
-            { to: "/results", label: "Results" },
-            { to: "/resources", label: "Resources" },
-            { to: "/feedback", label: "Feedback" },
+            { to: "/", key: "nav.welcome" },
+            { to: "/questionnaire", key: "nav.questionnaire" },
+            { to: "/results", key: "nav.results" },
+            { to: "/resources", key: "nav.resources" },
+            { to: "/feedback", key: "nav.feedback" },
           ].map((item) => (
             <NavLink
               key={item.to}
@@ -46,7 +46,7 @@ export default function Header() {
                 `${navLinkBase} ${isActive ? "bg-primary text-white" : navDefault}`
               }
             >
-              {item.label}
+              {t(item.key)}
             </NavLink>
           ))}
           <NavLink
@@ -55,8 +55,24 @@ export default function Header() {
               `${navLinkBase} ${isActive ? "bg-primary text-white" : navDefault}`
             }
           >
-            Login
+            {t("nav.login")}
           </NavLink>
+
+          {/* Language selector */}
+          <div className="ml-2">
+            <select
+              aria-label="Language selector"
+              defaultValue={lang}
+              onChange={(e) => setLang(e.target.value)}
+              className="bg-transparent text-sm text-white/90 border border-[rgba(255,255,255,0.06)] px-2 py-1 rounded-md"
+            >
+              {languages.map((l) => (
+                <option key={l.code} value={l.code}>
+                  {l.label}
+                </option>
+              ))}
+            </select>
+          </div>
         </nav>
       </div>
     </header>
