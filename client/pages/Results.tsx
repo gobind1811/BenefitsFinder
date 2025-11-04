@@ -46,7 +46,7 @@ export default function Results() {
     <section className="container py-8">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold">
-          UpWise — Government Schemes & Resources
+          benefitfinder — Government Schemes & Resources
         </h1>
       </div>
 
