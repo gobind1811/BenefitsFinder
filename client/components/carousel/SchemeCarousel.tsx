@@ -185,10 +185,10 @@ export default function SchemeCarousel(): JSX.Element {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-white">
-                    Apply for Schemes
+                    {t("carousel.panel.title")}
                   </h3>
                   <p className="text-sm text-white/80">
-                    Find the right schemes for your needs and apply easily.
+                    {t("carousel.panel.desc")}
                   </p>
                 </div>
               </div>
