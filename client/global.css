@@ -234,9 +234,10 @@
 
 /* Card styles for questionnaire */
 .card {
-  background: white;
+  background: hsl(var(--card));
+  color: hsl(var(--card-foreground));
   border-radius: 0.75rem;
-  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
   padding: 1.25rem;
 }
 
