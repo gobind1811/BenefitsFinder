@@ -1,1 +1,56 @@
-{"header":{"title":"BenefitFinder"}}
+{
+  "nav": {
+    "welcome": "ਸੁਆਗਤ",
+    "questionnaire": "ਪ੍ਰਸ਼ਨਾਵਲੀ",
+    "results": "ਨਤੀਜੇ",
+    "resources": "ਸਰੋਤ",
+    "feedback": "ਪ੍ਰतिक੍ਰਿਆ",
+    "login": "ਲੌਗਿਨ"
+  },
+  "header": {
+    "title": "BenefitFinder"
+  },
+  "footer": {
+    "privacy": "ਰਹਿਣੀਤ ਨੀਤੀ",
+    "terms": "ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ",
+    "contact": "ਸੰਪਰਕ ਕਰੋ",
+    "copyright": "© {{year}} BenefitFinder. ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ."
+  },
+  "results": {
+    "title": "BenefitFinder — ਸਰਕਾਰੀ ਯੋਜਨਾਵਾਂ ਅਤੇ ਸਰੋਤ",
+    "apply": "ਹੁਣੇ ਅਰਜ਼ੀ ਕਰੋ",
+    "start_search": "ਨਵੀਂ ਖੋਜ ਸ਼ੁਰੂ ਕਰੋ"
+  },
+  "carousel": {
+    "slides": {
+      "education": { "title": "ਛਾਤ੍ਰਵ੍ਰਿੱਤੀ ਅਤੇ ਸਿੱਖਿਆ ਸਹਾਇਤਾ", "desc": "ਵਿਦਿਆਰਥੀਆਂ ਲਈ ਵਿੱਤੀ ਸਹਾਇਤਾ ਅਤੇ ਛਾਤ੍ਰਵ੍ਰਿੱਤੀਆਂ.", "cta": "ਹੋਰ ਜਾਣੋ" },
+      "women": { "title": "ਮਹਿਲਾ ਸਸ਼ਕਤੀਕਰਨ ਕਾਰਜਕ੍ਰਮ", "desc": "ਮਹਿਲਾਵਾਂ ਲਈ ਸਕਿਲ ਵਿਕਾਸ ਅਤੇ ਉਦਯਮਿਤਾ ਮਦਦ.", "cta": "ਹੁਣੇ ਅਰਜ਼ੀ ਕਰੋ" },
+      "agri": { "title": "ਕਿਸਾਨ ਅਤੇ ਖੇਤੀ ਸਹਾਇਤਾ", "desc": "ਕਿਸਾਨਾਂ ਲਈ ਸਬਸਿਡੀ, ਬਜਾਰ ਪਹੁੰਚ ਅਤੇ ਬੀਮਾ.", "cta": "ਹੋਰ ਜਾਣੋ" },
+      "housing": { "title": "PM Awas Yojana — ਕਿਫਾਇਤੀ ਰਿਹਾਇਸ਼", "desc": "ਘੱਟ ਆਮਦਨੀ ਵਾਲੇ ਪਰਿਵਾਰਾਂ ਲਈ ਰਿਹਾਇਸ਼ ਸਹਾਇਤਾ.", "cta": "ਹੁਣੇ ਅਰਜ਼ੀ ਕਰੋ" }
+    },
+    "panel": {
+      "title": "ਯੋਜਨਾਵਾਂ ਲਈ ਅਰਜ਼ੀ ਕਰੋ",
+      "desc": "ਆਪਣੀਆਂ ਜ਼ਰੂਰਤਾਂ ਲਈ ਠੀਕ ਯੋਜਨਾਵਾਂ ਲੱਭੋ ਅਤੇ ਆਸਾਨੀ ਨਾਲ ਅਰਜ਼ੀ ਕਰੋ.",
+      "categories": {
+        "education": "ਸਿੱਖਿਆ",
+        "women": "ਮਹਿਲਾਵਾਂ",
+        "agriculture": "ਖੇਤੀ",
+        "housing": "ਰਿਹਾਇਸ਼"
+      }
+    }
+  },
+  "feedback": {
+    "title": "ਅਸੀਂ ਤੁਹਾਡੇ ਫੀਡਬੈਕ ਦੀ ਕਦਰ ਕਰਦੇ ਹਾਂ",
+    "heading": "ਆਪਣਾ ਅਨੁਭਵ ਸਾਂਝਾ ਕਰੋ",
+    "name_placeholder": "ਆਪਣਾ ਨਾਮ ਦਰਜ ਕਰੋ",
+    "email_placeholder": "ਆਪਣਾ ਈਮੇਲ ਦਰਜ ਕਰੋ",
+    "category_experience": "ਅਨੁਭਵ",
+    "category_design": "ਵੈੱਬਸਾਈਟ ਡਿਜ਼ਾਈਨ",
+    "category_technical": "ਤਕਨੀਕੀ ਮੁੱਦਾ",
+    "category_suggestion": "ਸੁਝਾਅ",
+    "category_other": "ਹੋਰ",
+    "feedback_placeholder": "ਆਪਣੀਆਂ ਸੋਚਾਂ ਸਾਂਝੀਆਂ ਕਰੋ...",
+    "submit": "ਸਪੁਰਦ ਕਰੋ",
+    "thanks": "ਤੁਹਾਡੇ ਫੀਡਬੈਕ ਲਈ ਧੰਨਵਾਦ!"
+  }
+}
