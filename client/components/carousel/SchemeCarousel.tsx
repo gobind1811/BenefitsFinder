@@ -4,31 +4,31 @@ import { Link } from "react-router-dom";
 const slides = [
   {
     id: "education",
-    title: "Scholarship & Education Support",
-    desc: "Financial aid and scholarships for students to continue education.",
+    key: "carousel.slides.education",
     img: "https://cdn.builder.io/api/v1/image/assets%2F4cc3384f65e545ca80f7eeb4c328e33b%2F594c9c2454f74fb6a8fdbf65ac154fd4?format=webp&width=1600",
-    cta: { text: "Know More", url: "/resources#education", external: false },
+    ctaUrl: "/resources#education",
+    external: false,
   },
   {
     id: "women",
-    title: "Women Empowerment Programs",
-    desc: "Skill development, micro-credit and entrepreneurship support for women.",
+    key: "carousel.slides.women",
     img: "https://cdn.builder.io/api/v1/image/assets%2F4cc3384f65e545ca80f7eeb4c328e33b%2Fbeef885618e3422ab6c482875817115c?format=webp&width=1600",
-    cta: { text: "Apply Now", url: "/results#women", external: false },
+    ctaUrl: "/results#women",
+    external: false,
   },
   {
     id: "agri",
-    title: "Agriculture & Farmer Support",
-    desc: "Subsidies, market access and insurance to protect farmers' livelihoods.",
+    key: "carousel.slides.agri",
     img: "https://cdn.builder.io/api/v1/image/assets%2F4cc3384f65e545ca80f7eeb4c328e33b%2Ff4f5ee7dc73f4f90a5109f445ee52b6e?format=webp&width=1600",
-    cta: { text: "Know More", url: "/resources#agriculture", external: false },
+    ctaUrl: "/resources#agriculture",
+    external: false,
   },
   {
     id: "housing",
-    title: "PM Awas Yojana — Affordable Housing",
-    desc: "Support and subsidies to help low-income families access housing.",
+    key: "carousel.slides.housing",
     img: "https://cdn.builder.io/api/v1/image/assets%2F4cc3384f65e545ca80f7eeb4c328e33b%2F2040691a31194251877e033f4a4c3728?format=webp&width=1600",
-    cta: { text: "Apply Now", url: "https://pmaymis.gov.in/", external: true },
+    ctaUrl: "https://pmaymis.gov.in/",
+    external: true,
   },
 ];
 
