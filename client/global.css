@@ -12,52 +12,52 @@
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    /* Dark mode as default */
-    --background: 240 10% 7%; /* deep navy */
-    --foreground: 210 40% 98%; /* near-white text */
+    /* Charcoal background (soft, not pure black) */
+    --background: 230 8% 12%; /* deep charcoal */
+    --foreground: 230 6% 94%; /* soft off-white text */
 
-    --card: 240 10% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 230 7% 16%; /* slightly lighter than background */
+    --card-foreground: 230 6% 94%;
 
-    --popover: 240 10% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 230 7% 16%;
+    --popover-foreground: 230 6% 94%;
 
-    /* Violet primary (approx. #6A1B9A) expressed as HSL */
-    --primary: 288 70% 36%;
+    /* Primary violet: #7C3AED */
+    --primary: 262 83% 58%;
     --primary-foreground: 0 0% 100%;
-    --primary-rgb: 106,27,154;
+    --primary-rgb: 124,58,237;
 
-    --secondary: 270 30% 20%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 230 6% 30%;
+    --secondary-foreground: 230 6% 94%;
 
-    --muted: 240 7% 12%;
+    --muted: 230 6% 18%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 288 65% 45%;
+    --accent: 262 72% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 348 80% 50%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 230 6% 94%;
 
-    --border: 240 7% 18%;
-    --input: 240 7% 20%;
-    --ring: 288 70% 50%;
+    --border: 230 6% 18%;
+    --input: 230 6% 20%;
+    --ring: 262 72% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 240 10% 8%;
+    --sidebar-background: 230 8% 12%;
 
-    --sidebar-foreground: 210 40% 98%;
+    --sidebar-foreground: 230 6% 94%;
 
-    --sidebar-primary: 288 70% 36%;
+    --sidebar-primary: 262 83% 58%;
 
     --sidebar-primary-foreground: 0 0% 100%;
 
-    --sidebar-accent: 240 7% 12%;
+    --sidebar-accent: 230 6% 18%;
 
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 230 6% 94%;
 
-    --sidebar-border: 240 7% 12%;
+    --sidebar-border: 230 6% 14%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
