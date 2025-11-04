@@ -167,8 +167,14 @@ export default function Questionnaire() {
               </p>
               <input
                 type="text"
+                inputMode="numeric"
                 value={form.income}
-                onChange={(e) => setForm({ ...form, income: e.target.value })}
+                onChange={(e) => {
+                  const raw = e.target.value;
+                  // remove any negative signs and keep digits, commas and dots
+                  const sanitized = raw.replace(/-/g, "").trim();
+                  setForm({ ...form, income: sanitized });
+                }}
                 placeholder="Enter your income"
                 className="w-full h-12 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-emerald-300"
               />
