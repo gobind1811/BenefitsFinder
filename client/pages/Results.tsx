@@ -46,7 +46,7 @@ export default function Results() {
     <section className="container py-8">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold">
-          BenefitFinder — Government Schemes & Resources
+          {t("results.title")}
         </h1>
       </div>
 
