@@ -82,7 +82,7 @@ type I18nContextType = {
 const I18nContext = createContext<I18nContextType | undefined>(undefined);
 
 export function I18nProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLang] = useState<string>(() => {
+  const [langState, setLangState] = useState<string>(() => {
     if (typeof window !== "undefined") {
       const saved = window.localStorage.getItem("bf_lang");
       return saved || "en";
@@ -92,13 +92,13 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
 
   const setLang = (l: string) => {
     if (ALL_LOCALES[l]) {
-      window.localStorage.setItem("bf_lang", l);
-      _setLang(l);
+      if (typeof window !== "undefined") window.localStorage.setItem("bf_lang", l);
+      setLangState(l);
     }
   };
 
-  // internal state
-  const [_lang, _setLang] = React.useState<string>(lang);
+  // current language
+  const _lang = langState;
 
   const t = (key: string, fallback = "") => {
     const locale = ALL_LOCALES[_lang] || ALL_LOCALES["en"];
