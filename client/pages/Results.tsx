@@ -89,7 +89,7 @@ export default function Results() {
                 rel="noreferrer"
                 className="inline-block w-full text-center px-4 py-2 bg-primary text-white rounded shadow-sm hover:opacity-95"
               >
-                Apply Now
+                {t("results.apply")}
               </a>
             </div>
           </div>
