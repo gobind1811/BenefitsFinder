@@ -303,3 +303,19 @@
 .btn-ghost:hover {
   transform: translateY(-2px);
 }
+
+/* Replace explicit light backgrounds used across components with dark card tone for soft balanced aesthetic */
+.bg-white {
+  background-color: hsl(var(--card)) !important;
+  color: hsl(var(--card-foreground)) !important;
+}
+
+/* soft borders for light-on-dark */
+.border-white\/30 {
+  border-color: rgba(255,255,255,0.06) !important;
+}
+
+/* slightly rounded global elements */
+.rounded-md {
+  border-radius: 0.6rem !important;
+}
