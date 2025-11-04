@@ -38,9 +38,6 @@ export default function Results() {
     <section className="container py-8">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold">BenefitsFinder — Government Schemes & Resources</h1>
-        <div>
-          <Link to="/results" className="px-3 py-2 bg-white border rounded text-sm">Back to Results</Link>
-        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
