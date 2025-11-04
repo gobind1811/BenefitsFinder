@@ -12,6 +12,7 @@ export default function Header() {
     ? "sticky top-0 z-50 bg-black/40 backdrop-blur-sm"
     : "sticky top-0 z-50 bg-white/90 backdrop-blur border-b";
   const navDefault = isHome ? "text-white/95 drop-shadow-sm" : "text-black";
+  const { t, lang, setLang, languages } = useI18n();
 
   return (
     <header className={headerClass}>
