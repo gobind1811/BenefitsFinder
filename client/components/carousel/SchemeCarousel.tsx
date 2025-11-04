@@ -198,25 +198,25 @@ export default function SchemeCarousel(): JSX.Element {
                   href="/resources#education"
                   className="block text-left px-3 py-2 rounded-md bg-[rgba(255,255,255,0.04)] text-white/90 border border-[rgba(255,255,255,0.06)]"
                 >
-                  Education
+                  {t("carousel.panel.categories.education")}
                 </a>
                 <a
                   href="/resources#women"
                   className="block text-left px-3 py-2 rounded-md bg-[rgba(255,255,255,0.04)] text-white/90 border border-[rgba(255,255,255,0.06)]"
                 >
-                  Women
+                  {t("carousel.panel.categories.women")}
                 </a>
                 <a
                   href="/resources#agriculture"
                   className="block text-left px-3 py-2 rounded-md bg-[rgba(255,255,255,0.04)] text-white/90 border border-[rgba(255,255,255,0.06)]"
                 >
-                  Agriculture
+                  {t("carousel.panel.categories.agriculture")}
                 </a>
                 <a
                   href="/resources#housing"
                   className="block text-left px-3 py-2 rounded-md bg-[rgba(255,255,255,0.04)] text-white/90 border border-[rgba(255,255,255,0.06)]"
                 >
-                  Housing
+                  {t("carousel.panel.categories.housing")}
                 </a>
               </div>
             </div>
