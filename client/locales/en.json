@@ -29,6 +29,18 @@
       "housing": { "title": "PM Awas Yojana — Affordable Housing", "desc": "Support and subsidies to help low-income families access housing.", "cta": "Apply Now" }
     }
   },
+  "carousel": {
+    "panel": {
+      "title": "Apply for Schemes",
+      "desc": "Find the right schemes for your needs and apply easily.",
+      "categories": {
+        "education": "Education",
+        "women": "Women",
+        "agriculture": "Agriculture",
+        "housing": "Housing"
+      }
+    }
+  },
   "feedback": {
     "title": "We Value Your Feedback",
     "heading": "Share Your Experience",
