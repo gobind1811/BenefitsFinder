@@ -72,7 +72,6 @@ export default function Resources() {
     <section className="container py-8">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold">Resources</h1>
-        <Link to="/results" className="px-3 py-2 bg-white border rounded text-sm">Back to Results</Link>
       </div>
 
       <div className="mb-6 flex flex-col md:flex-row items-center gap-3">
