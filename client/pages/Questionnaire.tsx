@@ -46,15 +46,15 @@ export default function Questionnaire() {
     switch (step) {
       case 1:
         return (
-          form.age !== "" &&
+          form.age !== "" && Number(form.age) > 0 &&
           form.income !== "" &&
-          form.household !== "" &&
+          form.household !== "" && Number(form.household) > 0 &&
           form.state !== "" &&
           form.gender !== "" &&
           form.occupation !== ""
         );
       case 2:
-        return form.maritalStatus !== "" && form.dependents !== "";
+        return form.maritalStatus !== "" && form.dependents !== "" && Number(form.dependents) >= 0;
       case 3:
         return form.education !== "" && form.disability !== "";
       case 4:
