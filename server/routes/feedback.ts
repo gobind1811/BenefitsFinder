@@ -9,7 +9,13 @@ export const submitFeedback: RequestHandler = (req, res) => {
     return res.status(400).json({ error: "Missing required fields" });
   }
 
-  storage.push({ name, email, category, feedback, timestamp: timestamp || Date.now() });
+  storage.push({
+    name,
+    email,
+    category,
+    feedback,
+    timestamp: timestamp || Date.now(),
+  });
   console.log("Received feedback:", { name, email, category });
 
   return res.json({ ok: true });

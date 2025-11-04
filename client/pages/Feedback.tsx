@@ -37,7 +37,13 @@ export default function Feedback() {
       const res = await fetch("/api/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, category, feedback, timestamp: Date.now() }),
+        body: JSON.stringify({
+          name,
+          email,
+          category,
+          feedback,
+          timestamp: Date.now(),
+        }),
       });
       if (res.ok) {
         setSuccess("Thank you for your feedback!");
@@ -59,7 +65,9 @@ export default function Feedback() {
   return (
     <section className="container py-12 flex justify-center">
       <div className="max-w-lg w-full">
-        <h1 className="text-2xl font-bold text-center mb-6 text-black">We Value Your Feedback</h1>
+        <h1 className="text-2xl font-bold text-center mb-6 text-black">
+          We Value Your Feedback
+        </h1>
 
         <div className="rounded-lg bg-[#E6D4F6] p-6 shadow-lg">
           <h2 className="text-lg font-semibold mb-3">Share Your Experience</h2>
@@ -86,7 +94,9 @@ export default function Feedback() {
             </div>
 
             <div>
-              <label className="block text-sm mb-1 font-medium">Feedback Category</label>
+              <label className="block text-sm mb-1 font-medium">
+                Feedback Category
+              </label>
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
@@ -101,7 +111,9 @@ export default function Feedback() {
             </div>
 
             <div>
-              <label className="block text-sm mb-1 font-medium">Your Feedback</label>
+              <label className="block text-sm mb-1 font-medium">
+                Your Feedback
+              </label>
               <textarea
                 value={feedback}
                 onChange={(e) => setFeedback(e.target.value)}
@@ -112,7 +124,11 @@ export default function Feedback() {
             </div>
 
             {error && <div className="text-sm text-destructive">{error}</div>}
-            {success && <div className="text-sm text-foreground font-medium">{success}</div>}
+            {success && (
+              <div className="text-sm text-foreground font-medium">
+                {success}
+              </div>
+            )}
 
             <div>
               <button
@@ -125,7 +141,12 @@ export default function Feedback() {
             </div>
 
             <div className="text-center mt-2">
-              <Link to="/" className="text-sm text-muted-foreground hover:underline">Back to Home</Link>
+              <Link
+                to="/"
+                className="text-sm text-muted-foreground hover:underline"
+              >
+                Back to Home
+              </Link>
             </div>
           </form>
         </div>

@@ -25,7 +25,7 @@
     /* Primary violet: #7C3AED */
     --primary: 262 83% 58%;
     --primary-foreground: 0 0% 100%;
-    --primary-rgb: 124,58,237;
+    --primary-rgb: 124, 58, 237;
 
     --secondary: 230 6% 30%;
     --secondary-foreground: 230 6% 94%;
@@ -258,7 +258,9 @@
 
 /* Button hover animations */
 .btn-primary {
-  transition: transform 160ms ease, box-shadow 160ms ease;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
   background: hsl(var(--primary));
   color: hsl(var(--primary-foreground));
   box-shadow: 0 6px 20px rgba(var(--primary-rgb), 0.12);
@@ -266,7 +268,9 @@
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 18px 60px rgba(var(--primary-rgb), 0.24), 0 2px 8px rgba(0,0,0,0.45);
+  box-shadow:
+    0 18px 60px rgba(var(--primary-rgb), 0.24),
+    0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
 /* Subtle violet glow for emphasis */
@@ -278,11 +282,15 @@
   background: hsl(var(--primary)) !important;
   color: hsl(var(--primary-foreground)) !important;
   box-shadow: 0 6px 20px rgba(var(--primary-rgb), 0.12);
-  transition: box-shadow 180ms ease, transform 160ms ease;
+  transition:
+    box-shadow 180ms ease,
+    transform 160ms ease;
   border-radius: 0.65rem;
 }
 .bg-primary:hover {
-  box-shadow: 0 18px 60px rgba(var(--primary-rgb), 0.24), 0 2px 8px rgba(0,0,0,0.45);
+  box-shadow:
+    0 18px 60px rgba(var(--primary-rgb), 0.24),
+    0 2px 8px rgba(0, 0, 0, 0.45);
   transform: translateY(-2px);
 }
 
@@ -292,13 +300,12 @@
   background: hsl(var(--secondary));
   color: hsl(var(--secondary-foreground));
   border-radius: 0.6rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 .btn-secondary:hover {
   filter: brightness(0.95);
 }
-
 
 .btn-ghost:hover {
   transform: translateY(-2px);
@@ -312,7 +319,7 @@
 
 /* soft borders for light-on-dark */
 .border-white\/30 {
-  border-color: rgba(255,255,255,0.06) !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
 }
 
 /* slightly rounded global elements */
