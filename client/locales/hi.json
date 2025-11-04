@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "welcome": "स्वागत है",
+    "questionnaire": "प्रश्नावली",
+    "results": "परिणाम",
+    "resources": "संसाधन",
+    "feedback": "प्रतिक्रिया",
+    "login": "लॉगिन"
+  },
+  "header": {
+    "title": "BenefitFinder"
+  },
+  "footer": {
+    "privacy": "गोपनीयता नीति",
+    "terms": "सेवा की शर्तें",
+    "contact": "संपर्क करें",
+    "copyright": "© {{year}} BenefitFinder. सर्वाधिकार सुरक्षित."
+  },
+  "results": {
+    "title": "BenefitFinder — सरकारी योजनाएँ और संसाधन",
+    "apply": "अब आवेदन करें",
+    "start_search": "नया खोज प्रारंभ करें"
+  },
+  "carousel": {
+    "slides": {
+      "education": { "title": "छात्रवृत्ति और शिक्षा सहायता", "desc": "छात्रों के लिए वित्तीय सहायता और छात्रवृत्तियाँ।", "cta": "और जानें" },
+      "women": { "title": "महिला सशक्तिकरण कार्यक्रम", "desc": "महिलाओं के लिए कौशल विकास और उद्यमिता सहायता।", "cta": "अब आवेदन करें" },
+      "agri": { "title": "कृषि और किसान समर्थन", "desc": "किसानों के लिए सब्सिडी, बाजार पहुँच और बीमा।", "cta": "और जानें" },
+      "housing": { "title": "प्रधानमंत्री आवास योजना — किफायती आवास", "desc": "कम आय वाले परिवारों के लिए आवास सहायता।", "cta": "अब आवेदन करें" }
+    }
+  },
+  "feedback": {
+    "title": "हम आपकी प्रतिक्रिया का मूल्य रखते हैं",
+    "heading": "अपना अनुभव साझा करें",
+    "name_placeholder": "अपना नाम दर्ज करें",
+    "email_placeholder": "अपना ईमेल दर्ज करें",
+    "category_experience": "अनुभव",
+    "category_design": "वेबसाइट डिज़ाइन",
+    "category_technical": "तकनीकी समस्या",
+    "category_suggestion": "सुझाव",
+    "category_other": "अन्य",
+    "feedback_placeholder": "अपने विचार साझा करें...",
+    "submit": "सबमिट करें",
+    "thanks": "आपकी प्रतिक्रिया के लिए धन्यवाद!"
+  }
+}
