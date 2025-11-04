@@ -192,10 +192,16 @@ export default function Questionnaire() {
               <p className="text-xs text-muted-foreground mb-2">Example: 4</p>
               <input
                 type="number"
+                min={0}
+                step={1}
                 value={form.household}
-                onChange={(e) =>
-                  setForm({ ...form, household: e.target.value })
-                }
+                onChange={(e) => {
+                  const raw = e.target.value;
+                  if (raw === "") return setForm({ ...form, household: "" });
+                  const num = Math.floor(Number(raw));
+                  if (isNaN(num)) return;
+                  setForm({ ...form, household: String(Math.max(0, num)) });
+                }}
                 placeholder="Enter household size"
                 className="w-full h-12 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-sky-300"
               />
