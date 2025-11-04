@@ -14,23 +14,23 @@ export default function Footer() {
             className={`hover:text-foreground ${isHome ? "text-white/80" : ""}`}
             href="#"
           >
-            Privacy Policy
+            {t("footer.privacy")}
           </a>
           <a
             className={`hover:text-foreground ${isHome ? "text-white/80" : ""}`}
             href="#"
           >
-            Terms of Service
+            {t("footer.terms")}
           </a>
           <a
             className={`hover:text-foreground ${isHome ? "text-white/80" : ""}`}
             href="#"
           >
-            Contact Us
+            {t("footer.contact")}
           </a>
         </nav>
         <p>
-          © {new Date().getFullYear()} BenefitFinder. All rights reserved.
+          {t("footer.copyright").replace("{{year}}", String(new Date().getFullYear()))}
         </p>
       </div>
     </footer>
