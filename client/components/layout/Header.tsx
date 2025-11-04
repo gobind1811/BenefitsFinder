@@ -27,7 +27,7 @@ export default function Header() {
           <span
             className={isHome ? "text-white font-bold" : "text-black font-bold"}
           >
-            UpWise
+            benefitfinder
           </span>
         </Link>
         <nav className="hidden md:flex items-center gap-1">
