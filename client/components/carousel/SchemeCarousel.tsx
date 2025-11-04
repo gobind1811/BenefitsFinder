@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 const slides = [
@@ -33,7 +32,7 @@ const slides = [
   },
 ];
 
-export default function SchemeCarousel() {
+export default function SchemeCarousel(): JSX.Element {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const intervalRef = useRef<number | null>(null);
@@ -44,9 +43,7 @@ export default function SchemeCarousel() {
       setIndex((i) => (i + 1) % slides.length);
     }, 3000);
     return () => {
-      if (intervalRef.current) {
-        window.clearInterval(intervalRef.current);
-      }
+      if (intervalRef.current) window.clearInterval(intervalRef.current);
     };
   }, [paused]);
 
@@ -61,7 +58,6 @@ export default function SchemeCarousel() {
       onMouseLeave={() => setPaused(false)}
       aria-roledescription="carousel"
     >
-      {/* background layers and emblem */}
       <div className="absolute inset-0 overflow-hidden">
         {slides.map((s, i) => (
           <img
@@ -98,20 +94,17 @@ export default function SchemeCarousel() {
                   href={slides[index].cta.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-[hsl(var(--primary))] text-white font-semibold shadow btn-primary"
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-primary text-white font-semibold shadow btn-primary glow"
                 >
                   {slides[index].cta.text}
                 </a>
               ) : (
-                <Link to={slides[index].cta.url} className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-[hsl(var(--primary))] text-white font-semibold shadow btn-primary">
+                <Link to={slides[index].cta.url} className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-primary text-white font-semibold shadow btn-primary glow">
                   {slides[index].cta.text}
                 </Link>
               )}
 
-              <a
-                href="/resources"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-[rgba(255,255,255,0.06)] text-white bg-[rgba(255,255,255,0.02)]"
-              >
+              <a href="/resources" className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-[rgba(255,255,255,0.06)] text-white bg-[rgba(255,255,255,0.02)]">
                 Browse Schemes
               </a>
             </div>
@@ -129,7 +122,6 @@ export default function SchemeCarousel() {
           </div>
 
           <div className="hidden md:block md:w-1/2">
-            {/* decorative right-side card with emblem and quick links */}
             <div className="bg-[rgba(255,255,255,0.03)] backdrop-blur-sm rounded-lg p-6 shadow-md">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[hsl(var(--primary))]">
