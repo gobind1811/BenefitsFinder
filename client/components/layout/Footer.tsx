@@ -1,5 +1,7 @@
 import { useLocation } from "react-router-dom";
 
+import { useI18n } from "../../lib/i18n";
+
 export default function Footer() {
   const location = useLocation();
   const isHome = location.pathname === "/";
