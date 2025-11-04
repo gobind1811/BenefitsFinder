@@ -24,19 +24,22 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Index />} />
-            <Route path="questionnaire" element={<Questionnaire />} />
-            <Route path="login" element={<Login />} />
-            <Route path="results" element={<Results />} />
-            <Route path="resources" element={<Resources />} />
-            <Route path="feedback" element={<Feedback />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      {/* i18n provider */}
+      <I18nProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Index />} />
+              <Route path="questionnaire" element={<Questionnaire />} />
+              <Route path="login" element={<Login />} />
+              <Route path="results" element={<Results />} />
+              <Route path="resources" element={<Resources />} />
+              <Route path="feedback" element={<Feedback />} />
+              <Route path="*" element={<NotFound />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </I18nProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );
