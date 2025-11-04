@@ -1,5 +1,4 @@
 import React from "react";
-import React from "react";
 import SchemeCarousel from "../components/carousel/SchemeCarousel";
 
 export default function Index() {
