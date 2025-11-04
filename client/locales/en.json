@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "welcome": "Welcome",
+    "questionnaire": "Questionnaire",
+    "results": "Results",
+    "resources": "Resources",
+    "feedback": "Feedback",
+    "login": "Login"
+  },
+  "header": {
+    "title": "BenefitFinder"
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact Us",
+    "copyright": "© {{year}} BenefitFinder. All rights reserved."
+  },
+  "results": {
+    "title": "BenefitFinder — Government Schemes & Resources",
+    "apply": "Apply Now",
+    "start_search": "Start a New Search"
+  },
+  "carousel": {
+    "slides": {
+      "education": { "title": "Scholarship & Education Support", "desc": "Financial aid and scholarships for students to continue education.", "cta": "Know More" },
+      "women": { "title": "Women Empowerment Programs", "desc": "Skill development, micro-credit and entrepreneurship support for women.", "cta": "Apply Now" },
+      "agri": { "title": "Agriculture & Farmer Support", "desc": "Subsidies, market access and insurance to protect farmers' livelihoods.", "cta": "Know More" },
+      "housing": { "title": "PM Awas Yojana — Affordable Housing", "desc": "Support and subsidies to help low-income families access housing.", "cta": "Apply Now" }
+    }
+  },
+  "feedback": {
+    "title": "We Value Your Feedback",
+    "heading": "Share Your Experience",
+    "name_placeholder": "Enter your name",
+    "email_placeholder": "Enter your email",
+    "category_experience": "Experience",
+    "category_design": "Website Design",
+    "category_technical": "Technical Issue",
+    "category_suggestion": "Suggestion",
+    "category_other": "Other",
+    "feedback_placeholder": "Share your thoughts...",
+    "submit": "Submit",
+    "thanks": "Thank you for your feedback!"
+  }
+}
