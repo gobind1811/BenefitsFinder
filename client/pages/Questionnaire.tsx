@@ -137,12 +137,20 @@ export default function Questionnaire() {
               </label>
               <p className="text-xs text-muted-foreground mb-2">Example: 30</p>
               <input
-                type="number"
-                value={form.age}
-                onChange={(e) => setForm({ ...form, age: e.target.value })}
-                placeholder="Enter your age"
-                className="w-full h-12 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-sky-300"
-              />
+              type="number"
+              min={0}
+              step={1}
+              value={form.age}
+              onChange={(e) => {
+                const raw = e.target.value;
+                if (raw === "") return setForm({ ...form, age: "" });
+                const num = Math.floor(Number(raw));
+                if (isNaN(num)) return;
+                setForm({ ...form, age: String(Math.max(0, num)) });
+              }}
+              placeholder="Enter your age"
+              className="w-full h-12 rounded-md border px-3 focus:outline-none focus:ring-2 focus:ring-sky-300"
+            />
             </div>
           </div>
 
