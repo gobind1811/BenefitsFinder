@@ -27,9 +27,7 @@
       "women": { "title": "Women Empowerment Programs", "desc": "Skill development, micro-credit and entrepreneurship support for women.", "cta": "Apply Now" },
       "agri": { "title": "Agriculture & Farmer Support", "desc": "Subsidies, market access and insurance to protect farmers' livelihoods.", "cta": "Know More" },
       "housing": { "title": "PM Awas Yojana — Affordable Housing", "desc": "Support and subsidies to help low-income families access housing.", "cta": "Apply Now" }
-    }
-  },
-  "carousel": {
+    },
     "panel": {
       "title": "Apply for Schemes",
       "desc": "Find the right schemes for your needs and apply easily.",
