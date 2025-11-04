@@ -285,16 +285,6 @@
   transform: translateY(-2px);
 }
 
-/* Fallback: match arbitrary Tailwind bg class used in components */
-[class*="bg-[hsl(var(--primary))]"] {
-  background: hsl(var(--primary)) !important;
-  color: hsl(var(--primary-foreground)) !important;
-  box-shadow: 0 6px 20px rgba(var(--primary-rgb), 0.14);
-}
-[class*="bg-[hsl(var(--primary))]"]:hover {
-  box-shadow: 0 12px 40px rgba(var(--primary-rgb), 0.22), 0 2px 8px rgba(0,0,0,0.35);
-  transform: translateY(-2px);
-}
 
 .btn-ghost:hover {
   transform: translateY(-2px);
